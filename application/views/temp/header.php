@@ -29,7 +29,7 @@
     />
 
     <!-- Icons. Uncomment required icon fonts -->
-    <!-- <link rel="stylesheet" href="<?//= base_url() ;?>assets/css/bootstrap.css" /> -->
+    <link rel="stylesheet" href="<?= base_url() ;?>assets/css/bootstrap.css" />
     <link rel="stylesheet" href="<?= base_url() ;?>assets/vendor/fonts/boxicons.css" />
 
     <!-- Core CSS -->
@@ -46,12 +46,14 @@
 
     <!-- Helpers -->
     <script src="<?= base_url() ;?>assets/vendor/js/helpers.js"></script>
-
+    
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="<?= base_url() ;?>assets/js/config.js"></script>
     <link rel="stylesheet" href="<?= base_url() ;?>assets/css/style.css" />
+    <script src="<?= base_url() ;?>assets/js/jquery.js"></script>
+    <script src="<?= base_url() ;?>assets/js/bootstrap.bundle.js"></script>
   </head>
-  
+
   <body>
 

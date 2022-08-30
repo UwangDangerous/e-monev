@@ -4,208 +4,211 @@
       <div class="layout-container">
     <!-- Menu -->
 
-    <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
-        
-        <div class="app-brand demo">
-            <a href="<?= MYURL ;?>" class="app-brand-link">
-            <span class="app-brand-logo demo">
-                  <img width="50"
-                      viewBox="0 0 37 60"
-                      src="<?= base_url() ;?>assets/img/icons/LogoBPOM.png" width="5%" height="5%">
-                   </span> <br>
-              <span class="app-brand-text-demo-menu-text-fw-bolder-ms-2">e-Monev SKL</span>
-            </a> <br><br>
+<aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
 
-            <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
-              <i class="bx bx-chevron-left bx-sm align-middle"></i>
-            </a>
-          </div>
+  <div class="app-brand demo">
+    <a href="<?= MYURL ;?>" class="app-brand-link">
+      <span class="app-brand-logo demo">
+        <img width="50"
+        viewBox="0 0 37 60"
+        src="<?= base_url() ;?>assets/img/icons/LogoBPOM.png" width="5%" height="5%">
+      </span> <br>
 
-          <div class="menu-inner-shadow"></div>
+      <span class="app-brand-text-demo-menu-text-fw-bolder-ms-2">e-Monev SKL</span>
+    </a> <br><br>
 
-          <ul class="menu-inner py-1">
-            <!-- Dashboard -->
-            <li class="menu-item">
-              <a href="<?= MYURL ;?>" class="menu-link">
-                <div data-i18n="Dashboard">Dashboard</div>
-              </a>
-            </li>
-            <li class="menu-item">
-              <a href="user-rekapitulasi-skl.html" class="menu-link">
-                <div data-i18n="Dashboard">Rekapitulasi-SKL</div>
-              </a>
-            </li>
+    <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
+      <i class="bx bx-chevron-left bx-sm align-middle"></i>
+    </a>
+  </div>
 
-            <!-- Layouts -->
-           
-            <li class="menu-header small text-uppercase">
-              <span class="menu-header-text">Input Data SKL</span>
-            </li>
-            <li class="menu-item">
-              <a href="javascript:void(0);" class="menu-link menu-toggle">
-              <div data-i18n="Standard Ruang lingkup">Standar Ruang Lingkup</div>
-              </a>
-              <ul class="menu-sub">
-                <li class="menu-item">
-                  <a href="javascript:void(0);" class="menu-link menu-toggle">
-                    <div data-i18n="SRL-Obat">SRL-Input Rencana</div>
-                  </a>
-                  <ul class="menu-sub">
-                    <li class="menu-item">
-                      <a href="user-input-srl-rencana-obat.html" class="menu-link">
-                        <div data-i18n="SRL-Obat">SRL-Obat</div>
-                      </a>
-                      </li>
-                      <li class="menu-item">
-                        <a href="user-input-srl-rencana-otsk.html" class="menu-link">
-                          <div data-i18n="SRL-OTSK">SRL-OTSK</div>
-                        </a>
-                      </li>
-                      <li class="menu-item">
-                        <a href="user-input-srl-rencana-kosmetik.html" class="menu-link">
-                          <div data-i18n="SRL-Kosmetik">SRL-Kosmetik</div>
-                        </a>
-                      </li>
-                      <li class="menu-item">
-                        <a href="user-input-srl-rencana-pangan.html" class="menu-link">
-                          <div data-i18n="SRL-Pangan">SRL-Pangan</div>
-                        </a>
-                      </li>
-                      <li class="menu-item">
-                        <a href="user-input-srl-rencana-MBM.html" class="menu-link">
-                          <div data-i18n="SRL-MBM">SRL-MBM</div>
-                        </a>
-                      </li>
-                      </ul>
-                </li>
-              </ul>
-              <ul class="menu-sub active">
-                <li class="menu-item active">
-                  <a href="javascript:void(0);" class="menu-link menu-toggle">
-                    <div data-i18n="SRL-Obat">SRL-Input Realisasi</div>
-                  </a>
-                  <ul class="menu-sub">
-                    <li class="menu-item">
-                      <a href="user-input-srl-realisasi-obat.html" class="menu-link">
-                        <div data-i18n="SRL-Obat">SRL-Obat</div>
-                      </a>
-                      </li>
-                      <li class="menu-item">
-                        <a href="user-input-srl-realisasi-otsk.html" class="menu-link">
-                          <div data-i18n="SRL-Obat Tradisional">SRL-OTSK</div>
-                        </a>
-                      </li>
-                      <li class="menu-item active">
-                        <a href="user-input-srl-realisasi-kosmetik.html" class="menu-link">
-                          <div data-i18n="SRL-Kosmetik">SRL-Kosmetik</div>
-                        </a>
-                      </li>
-                      <li class="menu-item">
-                        <a href="user-input-srl-realisasi-pangan.html" class="menu-link">
-                          <div data-i18n="SRL-Pangan">SRL-Pangan</div>
-                        </a>
-                      </li>
-                      <li class="menu-item">
-                        <a href="user-input-srl-realisasi-MBM.html" class="menu-link">
-                          <div data-i18n="SRL-MBM">SRL-MBM</div>
-                        </a>
-                      </li>
-                      </ul>
-                </li>
-              </ul>
-            </li>
-            <li class="menu-item">
-              <a href="javascript:void(0);" class="menu-link menu-toggle">
-            <div data-i18n="Pemenuhan Peralatan">Pemenuhan Peralatan</div>
-              </a>
-              <ul class="menu-sub">
-                <li class="menu-item">
-                  <a href="user-input-alat-kimia.html" class="menu-link">
-                    <div data-i18n="Alat-Obat">Peralatan-Kimia</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="user-input-alat-mbm.html" class="menu-link">
-                    <div data-i18n="Alat-Obat Tradisional">Peralatan-mbm</div>
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li class="menu-item">
-              <a href="user-input-kompetensi.html" class="menu-link">
-                <div data-i18n="Pemenuhan Kompetensi">Pemenuhan Kompetensi</div>
-              </a>
-            </li>
-            <!-- Lihat Data SKL -->
-            <li class="menu-header small text-uppercase"><span class="menu-header-text">Lihat Data SKL</span></li>
-            <li class="menu-item">
-              <a href="javascript:void(0);" class="menu-link menu-toggle">
-             <div data-i18n="Standar Ruang Lingkup">Standar Ruang Lingkup</div>
-              </a>
-              <ul class="menu-sub">
-                <li class="menu-item">
-                  <a href="user-lihat-srl-obat.html" class="menu-link">
-                    <div data-i18n="SRL-Obat">SRL-Obat</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="user-lihat-srl-otsk.html" class="menu-link">
-                    <div data-i18n="SRL-Obat Tradisional">SRL-OTSK</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="user-lihat-srl-kosmetik.html" class="menu-link">
-                    <div data-i18n="SRL-Kosmetik">SRL-Kosmetik</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="user-lihat-srl-pangan.html" class="menu-link">
-                    <div data-i18n="SRL-Pangan">SRL-Pangan</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="user-lihat-srl-MBM.html" class="menu-link">
-                    <div data-i18n="SRL-MBM">SRL-MBM</div>
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li class="menu-item">
-              <a href="javascript:void(0);" class="menu-link menu-toggle">
-            <div data-i18n="Pemenuhan Peralatan">Pemenuhan Peralatan</div>
-              </a>
-              <ul class="menu-sub">
-                <li class="menu-item">
-                  <a href="user-lihat-alat-kimia.html" class="menu-link">
-                    <div data-i18n="Alat-Obat">Peralatan-Kimia</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="user-lihat-alat-mbm.html" class="menu-link">
-                    <div data-i18n="Alat-Obat Tradisional">Peralatan-mbm</div>
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li class="menu-item">
-              <a href="user-lihat-kompetensi.html" class="menu-link">
-                <div data-i18n="Pemenuhan Kompetensi">Pemenuhan Kompetensi</div>
-              </a>
-               <!-- Lihat Data SKL -->
-            <li class="menu-header small text-uppercase"><span class="menu-header-text">Master Data</span></li>
-            <li class="menu-item">
-              <a href="pemenuhan-baku-pembanding.html" class="menu-link">
-             <div data-i18n="Standar Ruang Lingkup">Pemenuhan Baku Pembanding</div>
-              </a>
-              </li>
-              <li class="menu-item">
-                <a href="pemenuhan-baku-pembanding.html" class="menu-link">
-               <div data-i18n="Standar Ruang Lingkup">Pembagian Kelas Terapi SRL Obat</div>
-                </a>
-                </li>
-            </li>
+  <div class="menu-inner-shadow"></div>
 
-        </aside>
+  <ul class="menu-inner py-1">
+    <!-- Dashboard -->
+    <li class="menu-item">
+      <a href="<?= MYURL ;?>" class="menu-link">
+        <div data-i18n="Dashboard">Dashboard</div>
+      </a>
+    </li>
+    <li class="menu-item">
+      <a href="user-rekapitulasi-skl.html" class="menu-link">
+        <div data-i18n="Dashboard">Rekapitulasi-SKL</div>
+      </a>
+    </li>
+
+    <!-- Layouts -->
+
+    <li class="menu-header small text-uppercase">
+      <span class="menu-header-text">Input Data SKL</span>
+    </li>
+    <li class="menu-item">
+      <a href="javascript:void(0);" class="menu-link menu-toggle">
+        <div data-i18n="Standard Ruang lingkup">Standar Ruang Lingkup</div>
+      </a>
+
+      <ul class="menu-sub">
+      <li class="menu-item">
+      <a href="javascript:void(0);" class="menu-link menu-toggle">
+      <div data-i18n="SRL-Obat">SRL-Input Rencana</div>
+      </a>
+      <ul class="menu-sub">
+      <li class="menu-item">
+      <a href="user-input-srl-rencana-obat.html" class="menu-link">
+        <div data-i18n="SRL-Obat">SRL-Obat</div>
+      </a>
+    </li>
+  <li class="menu-item">
+    <a href="user-input-srl-rencana-otsk.html" class="menu-link">
+      <div data-i18n="SRL-OTSK">SRL-OTSK</div>
+    </a>
+  </li>
+  <li class="menu-item">
+    <a href="user-input-srl-rencana-kosmetik.html" class="menu-link">
+      <div data-i18n="SRL-Kosmetik">SRL-Kosmetik</div>
+    </a>
+  </li>
+  <li class="menu-item">
+    <a href="user-input-srl-rencana-pangan.html" class="menu-link">
+      <div data-i18n="SRL-Pangan">SRL-Pangan</div>
+    </a>
+  </li>
+  <li class="menu-item">
+    <a href="user-input-srl-rencana-MBM.html" class="menu-link">
+      <div data-i18n="SRL-MBM">SRL-MBM</div>
+    </a>
+  </li>
+  </ul>
+  </li>
+  </ul>
+  <ul class="menu-sub active">
+  <li class="menu-item active">
+  <a href="javascript:void(0);" class="menu-link menu-toggle">
+  <div data-i18n="SRL-Obat">SRL-Input Realisasi</div>
+  </a>
+  <ul class="menu-sub">
+  <li class="menu-item">
+  <a href="user-input-srl-realisasi-obat.html" class="menu-link">
+    <div data-i18n="SRL-Obat">SRL-Obat</div>
+  </a>
+  </li>
+  <li class="menu-item">
+    <a href="user-input-srl-realisasi-otsk.html" class="menu-link">
+      <div data-i18n="SRL-Obat Tradisional">SRL-OTSK</div>
+    </a>
+  </li>
+  <li class="menu-item active">
+    <a href="user-input-srl-realisasi-kosmetik.html" class="menu-link">
+      <div data-i18n="SRL-Kosmetik">SRL-Kosmetik</div>
+    </a>
+  </li>
+  <li class="menu-item">
+    <a href="user-input-srl-realisasi-pangan.html" class="menu-link">
+      <div data-i18n="SRL-Pangan">SRL-Pangan</div>
+    </a>
+  </li>
+  <li class="menu-item">
+    <a href="user-input-srl-realisasi-MBM.html" class="menu-link">
+      <div data-i18n="SRL-MBM">SRL-MBM</div>
+    </a>
+  </li>
+  </ul>
+  </li>
+  </ul>
+  </li>
+  <li class="menu-item">
+  <a href="javascript:void(0);" class="menu-link menu-toggle">
+  <div data-i18n="Pemenuhan Peralatan">Pemenuhan Peralatan</div>
+  </a>
+  <ul class="menu-sub">
+  <li class="menu-item">
+  <a href="user-input-alat-kimia.html" class="menu-link">
+  <div data-i18n="Alat-Obat">Peralatan-Kimia</div>
+  </a>
+  </li>
+  <li class="menu-item">
+  <a href="user-input-alat-mbm.html" class="menu-link">
+  <div data-i18n="Alat-Obat Tradisional">Peralatan-mbm</div>
+  </a>
+  </li>
+  </ul>
+  </li>
+  <li class="menu-item">
+  <a href="user-input-kompetensi.html" class="menu-link">
+  <div data-i18n="Pemenuhan Kompetensi">Pemenuhan Kompetensi</div>
+  </a>
+  </li>
+  <!-- Lihat Data SKL -->
+  <li class="menu-header small text-uppercase"><span class="menu-header-text">Lihat Data SKL</span></li>
+  <li class="menu-item">
+  <a href="javascript:void(0);" class="menu-link menu-toggle">
+  <div data-i18n="Standar Ruang Lingkup">Standar Ruang Lingkup</div>
+  </a>
+  <ul class="menu-sub">
+  <li class="menu-item">
+  <a href="user-lihat-srl-obat.html" class="menu-link">
+  <div data-i18n="SRL-Obat">SRL-Obat</div>
+  </a>
+  </li>
+  <li class="menu-item">
+  <a href="user-lihat-srl-otsk.html" class="menu-link">
+  <div data-i18n="SRL-Obat Tradisional">SRL-OTSK</div>
+  </a>
+  </li>
+  <li class="menu-item">
+  <a href="user-lihat-srl-kosmetik.html" class="menu-link">
+  <div data-i18n="SRL-Kosmetik">SRL-Kosmetik</div>
+  </a>
+  </li>
+  <li class="menu-item">
+  <a href="user-lihat-srl-pangan.html" class="menu-link">
+  <div data-i18n="SRL-Pangan">SRL-Pangan</div>
+  </a>
+  </li>
+  <li class="menu-item">
+  <a href="user-lihat-srl-MBM.html" class="menu-link">
+  <div data-i18n="SRL-MBM">SRL-MBM</div>
+  </a>
+  </li>
+  </ul>
+  </li>
+
+  <li class="menu-item">
+  <a href="javascript:void(0);" class="menu-link menu-toggle">
+  <div data-i18n="Pemenuhan Peralatan">Pemenuhan Peralatan</div>
+  </a>
+  <ul class="menu-sub">
+  <li class="menu-item">
+  <a href="user-lihat-alat-kimia.html" class="menu-link">
+  <div data-i18n="Alat-Obat">Peralatan-Kimia</div>
+  </a>
+  </li>
+  <li class="menu-item">
+  <a href="user-lihat-alat-mbm.html" class="menu-link">
+  <div data-i18n="Alat-Obat Tradisional">Peralatan-mbm</div>
+  </a>
+  </li>
+  </ul>
+  </li>
+  <li class="menu-item">
+  <a href="user-lihat-kompetensi.html" class="menu-link">
+  <div data-i18n="Pemenuhan Kompetensi">Pemenuhan Kompetensi</div>
+  </a>
+  <!-- Lihat Data SKL -->
+  <li class="menu-header small text-uppercase"><span class="menu-header-text">Master Data</span></li>
+  <li class="menu-item">
+  <a href="pemenuhan-baku-pembanding.html" class="menu-link">
+  <div data-i18n="Standar Ruang Lingkup">Pemenuhan Baku Pembanding</div>
+  </a>
+  </li>
+  <li class="menu-item">
+  <a href="pemenuhan-baku-pembanding.html" class="menu-link">
+  <div data-i18n="Standar Ruang Lingkup">Pembagian Kelas Terapi SRL Obat</div>
+  </a>
+  </li>
+  </li>
+
+</aside>
         <!-- / Menu -->
         <!-- Layout container -->
         <div class="layout-page">
@@ -226,7 +229,7 @@
 
               <ul class="navbar-nav flex-row align-items-center ms-auto">
                 <!-- Place this tag where you want the button to render. -->
-                <li class="nav-item lh-1 me-3">
+                <li class="nav-item lh-1 me-3" style="text-transform: uppercase">
                   <?= $this->session->userdata('monev_name'); ?>
                 </li>
 
@@ -276,7 +279,7 @@
                       <div class="dropdown-divider"></div>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="auth-login-basic.html">
+                      <a class="dropdown-item" href="<?= MYURL ;?>login/logout">
                         <i class="bx bx-power-off me-2"></i>
                         <span class="align-middle">Keluar</span>
                       </a>
