@@ -1,5 +1,7 @@
 
-
+    <script>
+      $("#tabel").dataTable() ;
+    </script>
     <!-- Core JS -->
     <!-- build:js assets/vendor/js/core.js -->
     <script src="<?= base_url() ;?>assets/vendor/libs/jquery/jquery.js"></script>
@@ -21,5 +23,7 @@
 
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    
   </body>
 </html>

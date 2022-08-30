@@ -30,6 +30,7 @@
 
     <!-- Icons. Uncomment required icon fonts -->
     <link rel="stylesheet" href="<?= base_url() ;?>assets/css/bootstrap.css" />
+    <link rel="stylesheet" href="<?= base_url() ;?>assets/css/dataTables.bootstrap4.min.css" />
     <link rel="stylesheet" href="<?= base_url() ;?>assets/vendor/fonts/boxicons.css" />
 
     <!-- Core CSS -->
@@ -53,6 +54,9 @@
     <link rel="stylesheet" href="<?= base_url() ;?>assets/css/style.css" />
     <script src="<?= base_url() ;?>assets/js/jquery.js"></script>
     <script src="<?= base_url() ;?>assets/js/bootstrap.bundle.js"></script>
+    
+    <script src="<?= base_url() ;?>assets/js/dataTables.js"></script>
+    <script src="<?= base_url() ;?>assets/js/dataTables.bootstrap4.min.js"></script>
   </head>
 
   <body>
