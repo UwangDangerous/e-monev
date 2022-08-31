@@ -25,14 +25,14 @@
                     $this->Login_model->cek_login() ;
                 }
             }else{
-                redirect(MYURL."Dashboard") ;
+                redirect(MYURL."") ;
             }
         }
 
         public function logout()
         {
             $this->session->sess_destroy() ;
-            redirect(MYURL."Login") ;
+            redirect(MYURL."login") ;
         }
 
 

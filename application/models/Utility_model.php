@@ -74,6 +74,27 @@
         {
             return md5(sha1($hash)) ;
         }
+
+        public function myPassword()
+        {
+            // default pw
+            return $this->myHash("m0113v") ;
+        }
+
+        public function cmbLevel()
+        {
+            $this->db->where("id_level !=", 1) ;
+            return $this->db->get("level")->result_array() ;
+        }
+
+        public function cmbTW(){
+            return $this->db->get("tw")->result_array() ;
+        }
+
+        public function cmbTahun()
+        {
+            return $this->db->get("tahun")->result_array() ;
+        }
     }
 
 ?>
