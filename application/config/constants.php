@@ -1,6 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 define("MYURL", "http://localhost/e-monev/") ; //buat koneksi diserver soalnya base url suka ga konek :( base_url() buat link ke file aja
+define("MYROUT", "./") ; //buat koneksi diserver soalnya base url suka ga konek :( base_url() buat link ke file aja
 define("MYWEB", "E-Monev SKL") ;
 define("MYSEO", "E-Monev SKL, PPPOMN, Pusat Pengembangan Pengujian Obat dan Makanan Nasional") ;
 /*

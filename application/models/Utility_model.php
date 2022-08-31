@@ -100,6 +100,47 @@
         {
             return $this->db->get("kelas")->result_array() ;
         }
+
+        public function uploadFile($namaBerkas, $path, $type, $redirect, $sess)
+        {
+           
+            if( $_FILES[$namaBerkas]['name'] ) {
+                $filename = explode("." , $_FILES[$namaBerkas]['name']) ;
+                $ekstensi = strtolower(end($filename)) ;
+                $config['upload_path'] = MYROUT.'/'.$path; //assets/file-upload/surat 
+                $config['allowed_types'] = "$type"; //'pdf|jpg|png|jpeg'
+                // $config['file_size'] = '1028'; //kb
+                $hashDate = md5(date('Y-m-d H:i:s')) ;
+                
+                $nama = '' ;
+
+                $berkas = $hashDate ;
+
+                $config['file_name'] = $berkas ;
+
+                $this->load->library('upload',$config);
+
+                if($this->upload->do_upload($namaBerkas)){
+                    $this->upload->initialize($config);
+                }else{
+                    $pesan = [
+                        "pesan$sess" => $this->upload->display_errors(),
+                        "warna$sess" => "danger"
+                    ];
+                    $this->session->set_flashdata($pesan);
+                    redirect(MYURL."$redirect") ;  
+                }
+
+                return $config['file_name'].'.'.$ekstensi ;
+            } else{
+                $pesan = [
+                    "pesan$sess" => "berkas tidak boleh kosong",
+                    "warna$sess" => "danger"
+                ];
+                $this->session->set_flashdata($pesan);
+                redirect(MYURL."$redirect") ;  
+            }
+        }
     }
 
 ?>

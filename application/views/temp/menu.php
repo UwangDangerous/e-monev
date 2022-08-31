@@ -34,46 +34,46 @@
 
     <ul class="menu-sub">
         <!-- SRL-Input Rencana -->
-        <li class="menu-item">
+        <!-- <li class="menu-item">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
             <div data-i18n="SRL-Obat">SRL-Input Rencana</div>
             </a>
 
-            <ul class="menu-sub">
-            <li class="menu-item">
-                <a href="<?= MYURL ;?>standar/obat" class="menu-link">
-                <div data-i18n="SRL-Obat">SRL-Obat</div> 
-                </a>
-            </li>
+            <ul class="menu-sub"> -->
+                <li class="menu-item">
+                    <a href="<?= MYURL ;?>standar/obat" class="menu-link">
+                    <div data-i18n="SRL-Obat">SRL-Obat</div> 
+                    </a>
+                </li>
 
-            <li class="menu-item">
-                <a href="user-input-srl-rencana-otsk.html" class="menu-link">
-                <div data-i18n="SRL-OTSK">SRL-OTSK</div>
-                </a>
-            </li>
-            <li class="menu-item">
-                <a href="user-input-srl-rencana-kosmetik.html" class="menu-link">
-                <div data-i18n="SRL-Kosmetik">SRL-Kosmetik</div>
-                </a>
-            </li>
-            <li class="menu-item">
-                <a href="user-input-srl-rencana-pangan.html" class="menu-link">
-                <div data-i18n="SRL-Pangan">SRL-Pangan</div>
-                </a>
-            </li>
-            <li class="menu-item">
-                <a href="user-input-srl-rencana-MBM.html" class="menu-link">
-                <div data-i18n="SRL-MBM">SRL-MBM</div>
-                </a>
-            </li>
-            </ul>
-        </li>
+                <li class="menu-item">
+                    <a href="user-input-srl-rencana-otsk.html" class="menu-link">
+                    <div data-i18n="SRL-OTSK">SRL-OTSK</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="user-input-srl-rencana-kosmetik.html" class="menu-link">
+                    <div data-i18n="SRL-Kosmetik">SRL-Kosmetik</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="user-input-srl-rencana-pangan.html" class="menu-link">
+                    <div data-i18n="SRL-Pangan">SRL-Pangan</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="user-input-srl-rencana-MBM.html" class="menu-link">
+                    <div data-i18n="SRL-MBM">SRL-MBM</div>
+                    </a>
+                </li>
+            <!-- </ul>
+        </li> -->
         <!-- tutup SRL-Input Rencana -->
     </ul>
 
-    <ul class="menu-sub">
+    <!-- <ul class="menu-sub"> -->
         <!-- SRL-Input Realisasi -->
-        <li class="menu-item">
+        <!-- <li class="menu-item">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
             <div data-i18n="SRL-Obat">SRL-Input Realisasi</div>
             </a>
@@ -108,9 +108,9 @@
                 </a>
             </li>
             </ul>
-        </li>
+        </li> -->
         <!-- tutup SRL-Input Realisasi -->
-    </ul>
+    <!-- </ul> -->
     </li>
 <!-- Tutup Standar Ruang Lingkup -->
 
