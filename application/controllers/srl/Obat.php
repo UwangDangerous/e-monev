@@ -10,13 +10,13 @@ class Obat extends CI_Controller{
 
     public function index()
     {
-        if($this->session->userdata('monev') != null && $this->session->userdata('monev_level_id') == 1) {
-            $data['judul'] = "Standar Ruang Lingkup - ".MYWEB ;
+        if($this->session->userdata('monev_id') != null && $this->session->userdata('monev_level_id') == 1) {
+            $data['judul'] = "Standar Ruang Lingkup Obat - ".MYWEB ;
             $data['bread'] = [
                 [ '', '', 'Dashboard' ],
-                [ 'active', '', 'Standar Ruang Lingkup' ]
+                [ 'active', '', 'Standar Ruang Lingkup Obat' ]
             ];
-            $data['sub'] = 'Standar Ruang Lingkup' ;
+            $data['sub'] = 'Standar Ruang Lingkup Obat' ;
             $data['data'] = $this->Srl_model->getDataObat()->result_array() ;
 
             $this->load->view('temp/header', $data) ;
@@ -32,11 +32,11 @@ class Obat extends CI_Controller{
 
     public function tambah()
     {
-        if($this->session->userdata('monev') != null && $this->session->userdata('monev_level_id') == 1) {
+        if($this->session->userdata('monev_id') != null && $this->session->userdata('monev_level_id') == 1) {
             $data['judul'] = "Tambah Form SRL Obat - ".MYWEB ;
             $data['bread'] = [
                 [ '', '', 'Dashboard' ],
-                [ '', 'srl/obat', 'Standar Ruang Lingkup' ],
+                [ '', 'srl/obat', 'Standar Ruang Lingkup Obat' ],
                 [ 'active', '', 'Tambah' ]
             ];
             $data['sub'] = 'Tambah Form SRL Obat' ;
@@ -67,11 +67,11 @@ class Obat extends CI_Controller{
 
     public function ubah($id)
     {
-        if($this->session->userdata('monev') != null && $this->session->userdata('monev_level_id') == 1) {
+        if($this->session->userdata('monev_id') != null && $this->session->userdata('monev_level_id') == 1) {
             $data['judul'] = "Ubah Form SRL Obat - ".MYWEB ;
             $data['bread'] = [
                 [ '', '', 'Dashboard' ],
-                [ '', 'srl/obat', 'Standar Ruang Lingkup' ],
+                [ '', 'srl/obat', 'Standar Ruang Lingkup Obat' ],
                 [ 'active', '', 'Ubah' ]
             ];
             $data['sub'] = 'Ubah Form SRL Obat' ;
@@ -103,7 +103,7 @@ class Obat extends CI_Controller{
 
     public function hapus($id)
     {
-        if($this->session->userdata('monev') != null && $this->session->userdata('monev_level_id') == 1) {
+        if($this->session->userdata('monev_id') != null && $this->session->userdata('monev_level_id') == 1) {
             $this->Srl_model->deleteObat($id) ;
         }else{
             $this->session->set_flashdata('pesan', 'Tidak ada akses') ;

@@ -13,18 +13,18 @@
 
             <a href="<?= MYURL; ?>srl/obat/tambah" class="btn btn-primary">Tambah Data</a>
 
-            <div class="table-responsive text-nowrap mt-3">
-                <table class="table table-sm table-borders table-small-text text-center" id="tabel">
+            <div class="table-responsive mt-3">
+                <table class="table table-borders table-small-text text-center" id="tabel">
                     <thead>
                         <tr class="table-primary">
-                            <th>No</th>
-                            <th>KELAS TERAPI</th>
-                            <th>ZAT AKTIF</th>
-                            <th>JENIS SEDIAAN</th>
-                            <th>BENTUK SEDIAAN</th>
-                            <th>PUSTAKA ACUAN</th>
-                            <th>PARAMETER UJI</th>
-                            <th>AKSI</th>
+                            <th class="align-middle">No</th>
+                            <th class="align-middle">KELAS TERAPI</th>
+                            <th class="align-middle">ZAT AKTIF</th>
+                            <th class="align-middle">JENIS SEDIAAN</th>
+                            <th class="align-middle">BENTUK SEDIAAN</th>
+                            <th class="align-middle">PUSTAKA ACUAN</th>
+                            <th class="align-middle">PARAMETER UJI</th>
+                            <th class="align-middle">AKSI</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -37,30 +37,7 @@
                                 <td class="align-middle"><?= $row['jenis_sedian']; ?></td>
                                 <td class="align-middle"><?= $row['bentuk_sedian']; ?></td>
                                 <td class="align-middle"><?= $row['pustaka']; ?></td>
-                                <td class="align-middle">
-                                    <?php 
-                                        $param = rtrim($row['parameter'], ';');
-                                        $param = explode(';', $row['parameter']); 
-                                        $i = 0 ;
-                                        $parameter = '' ;
-                                        if(count($param) == 1) {
-                                            $parameter = $row['parameter'] ;
-                                        }
-                                        foreach($param as $uji){
-                                            // if($i > 0){
-                                                if($i % 2 == 1){
-                                                    $parameter .= $param[$i].';<br>' ;
-                                                }else{
-                                                    $parameter .= $param[$i].';' ;
-                                                }
-                                            // }
-
-                                            $i++ ;
-                                        }
-
-                                        echo $parameter ;
-                                    ?>
-                                </td>
+                                <td class="align-middle"><?= $row['parameter']; ?></td>
                                 <td class="align-middle">
                                     <a href="<?= MYURL ;?>srl/obat/ubah/<?= $row['id_srl'] ;?>" class="badge badge-success" data-toggle="tooltip" title="Ubah Data"><i class="fa fa-edit"></i></a>
                                     <a href="<?= MYURL ;?>srl/obat/hapus/<?= $row['id_srl'] ;?>" class="badge badge-danger" onclick="return confirm('yakin?')" data-toggle="tooltip" title="Ubah Data"><i class="fa fa-trash"></i></a>

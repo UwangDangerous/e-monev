@@ -10,7 +10,7 @@ class Tahun extends CI_Controller{
 
     public function index()
     {
-        if($this->session->userdata('monev') != null && $this->session->userdata('monev_level_id') == 1) {
+        if($this->session->userdata('monev_id') != null && $this->session->userdata('monev_level_id') == 1) {
             $data['judul'] = "Data Laboratorium - ".MYWEB ;
             $data['bread'] = [
                 [ '', '', 'Dashboard' ],
@@ -32,7 +32,7 @@ class Tahun extends CI_Controller{
 
     public function tambah()
     {
-        if($this->session->userdata('monev') != null && $this->session->userdata('monev_level_id') == 1) {
+        if($this->session->userdata('monev_id') != null && $this->session->userdata('monev_level_id') == 1) {
             $this->Master_model->addTahun() ;
         }else{
             $this->session->set_flashdata('pesan', 'Tidak ada akses') ;
@@ -42,7 +42,7 @@ class Tahun extends CI_Controller{
 
     public function hapus($tahun)
     {
-        if($this->session->userdata('monev') != null && $this->session->userdata('monev_level_id') == 1) {
+        if($this->session->userdata('monev_id') != null && $this->session->userdata('monev_level_id') == 1) {
             $this->Master_model->deleteTahun($tahun) ;
         }else{
             $this->session->set_flashdata('pesan', 'Tidak ada akses') ;

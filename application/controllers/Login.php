@@ -10,7 +10,7 @@
 
         public function index()
         {
-            if($this->session->userdata('monev') == null) {
+            if($this->session->userdata('monev_id') == null) {
                 $data['judul'] = MYWEB ;
     
                 $this->form_validation->set_rules('username', 'Username', 'required');

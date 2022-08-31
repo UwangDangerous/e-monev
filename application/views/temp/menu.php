@@ -22,7 +22,7 @@
             
 <!-- input data skl judul -->
     <li class="menu-header small text-uppercase">
-    <span class="menu-header-text">Input Data SKL</span>
+    <span class="menu-header-text">Data SKL</span>
     </li>
 <!-- input data skl judul -->
 
@@ -41,8 +41,8 @@
 
             <ul class="menu-sub">
             <li class="menu-item">
-                <a href="user-input-srl-rencana-obat.html" class="menu-link">
-                <div data-i18n="SRL-Obat">SRL-Obat</div>
+                <a href="<?= MYURL ;?>standar/obat" class="menu-link">
+                <div data-i18n="SRL-Obat">SRL-Obat</div> 
                 </a>
             </li>
 
@@ -226,7 +226,7 @@
 
 <!-- Master data -->
     <li class="menu-header small text-uppercase"><span class="menu-header-text">Master Data</span></li>
-    <li class="menu-item">
+    <!-- <li class="menu-item">
     <a href="pemenuhan-baku-pembanding.html" class="menu-link">
         <div data-i18n="Standar Ruang Lingkup">Pemenuhan Baku Pembanding</div>
     </a>
@@ -235,7 +235,7 @@
     <a href="pemenuhan-baku-pembanding.html" class="menu-link">
         <div data-i18n="Standar Ruang Lingkup">Pembagian Kelas Terapi SRL Obat</div>
     </a>
-    </li>
+    </li> -->
 
     <li class="menu-item">
         <a href="javascript:void(0);" class="menu-link menu-toggle">

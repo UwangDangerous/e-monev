@@ -10,7 +10,7 @@ class Kelas extends CI_Controller{
 
     public function index()
     {
-        if($this->session->userdata('monev') != null && $this->session->userdata('monev_level_id') == 1) {
+        if($this->session->userdata('monev_id') != null && $this->session->userdata('monev_level_id') == 1) {
             $data['judul'] = "Kelas Terapi - ".MYWEB ;
             $data['bread'] = [
                 [ '', '', 'Dashboard' ],
@@ -32,7 +32,7 @@ class Kelas extends CI_Controller{
 
     public function tambah()
     {
-        if($this->session->userdata('monev') != null && $this->session->userdata('monev_level_id') == 1) {
+        if($this->session->userdata('monev_id') != null && $this->session->userdata('monev_level_id') == 1) {
             $this->Master_model->addKelas() ;
         }else{
             $this->session->set_flashdata('pesan', 'Tidak ada akses') ;
@@ -42,7 +42,7 @@ class Kelas extends CI_Controller{
 
     public function ubah($id)
     {
-        if($this->session->userdata('monev') != null && $this->session->userdata('monev_level_id') == 1) {
+        if($this->session->userdata('monev_id') != null && $this->session->userdata('monev_level_id') == 1) {
             $this->Master_model->editKelas($id) ;
         }else{
             $this->session->set_flashdata('pesan', 'Tidak ada akses') ;
@@ -52,7 +52,7 @@ class Kelas extends CI_Controller{
 
     public function hapus($id)
     {
-        if($this->session->userdata('monev') != null && $this->session->userdata('monev_level_id') == 1) {
+        if($this->session->userdata('monev_id') != null && $this->session->userdata('monev_level_id') == 1) {
             $this->Master_model->deleteKelas($id) ;
         }else{
             $this->session->set_flashdata('pesan', 'Tidak ada akses') ;

@@ -10,7 +10,7 @@
 
         public function index()
         {
-            if($this->session->userdata('monev') != null) {
+            if($this->session->userdata('monev_id') != null) {
                 $data['judul'] = "E-Monev SKL - Selamat datang di E- Monitoring dan Evaluasi Standard Kemampuan Laboratorium" ;
                 $data['bread'] = [
                     [ 'active', '', 'Dashboard' ]
@@ -27,23 +27,6 @@
                 redirect(MYURL."login") ;
             }
         }
-
-        // public function tambah()
-        // {
-        //     // lupa
-
-        //     $this->form_validation->set_rules('nip', 'NIP', 'required');
-        //     $this->form_validation->set_rules('nama', 'Nama', 'required');
-
-        //     if($this->form_validation->run() == FALSE) {
-        //         $this->load->view('temp/header') ;
-        //         $this->load->view('home/tambah') ;
-        //         $this->load->view('temp/footer') ;
-        //     }else{
-        //         // nanti ke model
-        //         $this->home->addDataUser() ;
-        //     }
-        // }
 
     }
 
