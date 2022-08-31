@@ -14,7 +14,7 @@
             <a href="<?= MYURL; ?>master/lab/tambah" class="btn btn-primary">Tambah Data</a>
 
             <div class="table-responsive text-nowrap mt-3">
-                <table class="table table-sm table-bordered table-small-text text-center" id="">
+                <table class="table table-sm table-borders table-small-text text-center" id="tabel">
                     <thead>
                         <tr class="table-primary">
                             <th>No</th>

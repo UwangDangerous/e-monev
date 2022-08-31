@@ -204,4 +204,67 @@ class Master_model extends CI_Model{
         }
     // tutup tahun 
 
+    // kelas 
+        public function getDataKelas()
+        {
+            return $this->db->get('kelas')->result_array() ;
+        } 
+
+        public function addKelas()
+        {
+            if($this->db->insert("kelas", ['nama_kelas' => $this->input->post("nama_kelas")])) {
+                $pesan = [
+                    "pesan" => "Data Berhasil Disimpan",
+                    "warna" => "success"
+                ];
+            }else{
+                $pesan = [
+                    "pesan" => "Data Gagal Disimpan",
+                    "warna" => "danger"
+                ];
+            }
+
+            $this->session->set_flashdata($pesan) ;
+            redirect(MYURL."master/kelas") ;
+        }
+
+        public function editKelas($id)
+        {
+            $this->db->where("id_kelas", $id) ;
+            if($this->db->update("kelas", ['nama_kelas' => $this->input->post("nama_kelas")])) {
+                $pesan = [
+                    "pesan" => "Data Berhasil Diubah",
+                    "warna" => "success"
+                ];
+            }else{
+                $pesan = [
+                    "pesan" => "Data Gagal Diubah",
+                    "warna" => "danger"
+                ];
+            }
+
+            $this->session->set_flashdata($pesan) ;
+            redirect(MYURL."master/kelas") ;
+        }
+
+        public function deleteKelas($id)
+        {
+            $this->db->where("id_kelas", $id) ;
+            if($this->db->delete("kelas")) {
+                $pesan = [
+                    "pesan" => "Data Berhasil Dihapus",
+                    "warna" => "success"
+                ];
+            }else{
+                $pesan = [
+                    "pesan" => "Data Gagal Dihapus",
+                    "warna" => "danger"
+                ];
+            }
+
+            $this->session->set_flashdata($pesan) ;
+            redirect(MYURL."master/kelas") ;
+        }
+    // tutup kelas 
+
 }

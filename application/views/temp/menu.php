@@ -238,26 +238,63 @@
     </li>
 
     <li class="menu-item">
-    <a href="javascript:void(0);" class="menu-link menu-toggle">
-        <div data-i18n="Pemenuhan Peralatan">Master Data</div>
-    </a>
-    <ul class="menu-sub">
-        <li class="menu-item">
-            <a href="<?= MYURL ;?>master/user" class="menu-link">
-                <div data-i18n="Alat-Obat">User</div>
-            </a>
-        </li>
-        <li class="menu-item">
-            <a href="<?= MYURL ;?>master/lab" class="menu-link">
-                <div data-i18n="Alat-Obat">Laboratorium</div>
-            </a>
-        </li>
-        <li class="menu-item">
-            <a href="<?= MYURL ;?>master/tahun" class="menu-link">
-                <div data-i18n="Alat-Obat">Tahun</div>
-            </a>
-        </li>
-    </ul>
+        <a href="javascript:void(0);" class="menu-link menu-toggle">
+            <div data-i18n="Pemenuhan Peralatan">Master Data</div>
+        </a>
+        <ul class="menu-sub">
+            <li class="menu-item">
+                <a href="<?= MYURL ;?>master/user" class="menu-link">
+                    <div data-i18n="">User</div>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="<?= MYURL ;?>master/lab" class="menu-link">
+                    <div data-i18n="">Laboratorium</div>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="<?= MYURL ;?>master/tahun" class="menu-link">
+                    <div data-i18n="">Tahun</div>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="<?= MYURL ;?>master/kelas" class="menu-link">
+                    <div data-i18n="">Kelas Terapi</div>
+                </a>
+            </li>
+        </ul>
+    </li>
+    <li class="menu-item">
+        <a href="javascript:void(0);" class="menu-link menu-toggle">
+            <div data-i18n="Pemenuhan Peralatan">Form</div>
+        </a>
+        <ul class="menu-sub">
+            <li class="menu-item">
+                <a href="<?= MYURL ;?>srl/obat" class="menu-link">
+                    <div data-i18n="">SRL-Obat</div>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="<?= MYURL ;?>srl/otsk" class="menu-link">
+                    <div data-i18n="">SRL-OTSK</div>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="<?= MYURL ;?>srl/kosmetik" class="menu-link">
+                    <div data-i18n="">SRL-Kosmetik</div>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="<?= MYURL ;?>srl/pangan" class="menu-link">
+                    <div data-i18n="">SRL-Pangan</div>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="<?= MYURL ;?>srl/mbm" class="menu-link">
+                    <div data-i18n="">SRL-MBM</div>
+                </a>
+            </li>
+        </ul>
     </li>
 <!-- tutup Master data -->
 

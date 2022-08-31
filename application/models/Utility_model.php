@@ -95,6 +95,11 @@
         {
             return $this->db->get("tahun")->result_array() ;
         }
+
+        public function cmbKelas()
+        {
+            return $this->db->get("kelas")->result_array() ;
+        }
     }
 
 ?>
