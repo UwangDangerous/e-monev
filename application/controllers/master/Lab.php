@@ -1,6 +1,6 @@
 <?php 
 
-class User extends CI_Controller{
+class Lab extends CI_Controller{
     public function __construct()
     {
         parent::__construct() ;
@@ -11,17 +11,17 @@ class User extends CI_Controller{
     public function index()
     {
         if($this->session->userdata('monev') != null && $this->session->userdata('monev_level_id') == 1) {
-            $data['judul'] = "Data User - ".MYWEB ;
+            $data['judul'] = "Data Laboratorium - ".MYWEB ;
             $data['bread'] = [
                 [ '', '', 'Dashboard' ],
-                [ 'active', '', 'User' ]
+                [ 'active', '', 'Lab' ]
             ];
-            $data['sub'] = 'Data User' ;
-            $data['data'] = $this->Master_model->getDataUser()->result_array() ;
+            $data['sub'] = 'Laboratorium' ;
+            $data['data'] = $this->Master_model->getDataLab()->result_array() ;
 
             $this->load->view('temp/header', $data) ;
             $this->load->view('temp/dsb_header') ;
-            $this->load->view('master/user/index') ;
+            $this->load->view('master/lab/index') ;
             $this->load->view('temp/dsb_footer') ;
             $this->load->view('temp/footer') ;
         }else{
@@ -33,27 +33,25 @@ class User extends CI_Controller{
     public function tambah()
     {
         if($this->session->userdata('monev') != null && $this->session->userdata('monev_level_id') == 1) {
-            $data['judul'] = "Tambah Data User - ".MYWEB ;
+            $data['judul'] = "Tambah Laboratorium - ".MYWEB ;
             $data['bread'] = [
                 [ '', '', 'Dashboard' ],
-                [ '', 'master/user', 'User' ],
-                [ 'active', '', 'Tambah User' ]
+                [ '', 'master/lab', 'Laboratorium' ],
+                [ 'active', '', 'Tambah Laboratorium' ]
             ];
-            $data['sub'] = 'Tambah Data User' ;
-            $data['level'] = $this->Utility_model->cmbLevel() ;
+            $data['sub'] = 'Tambah Laboratorium' ;
 
-            $this->form_validation->set_rules('nama', 'Nama', 'required');
-            $this->form_validation->set_rules('kode', 'Kode / NIP', 'required|is_unique[user.kode]|numeric');
-            $this->form_validation->set_rules('id_level', 'Level User', 'required');
+            $this->form_validation->set_rules('nama_lab', 'Laboratorium', 'required');
+            $this->form_validation->set_rules('nama_lain', 'Nama Lab', 'required');
 
             if($this->form_validation->run() == FALSE) {
                 $this->load->view('temp/header', $data) ;
                 $this->load->view('temp/dsb_header') ;
-                $this->load->view('master/user/tambah') ;
+                $this->load->view('master/lab/tambah') ;
                 $this->load->view('temp/dsb_footer') ;
                 $this->load->view('temp/footer') ;
             }else{
-                $this->Master_model->addUser() ;
+                $this->Master_model->addLab() ;
             }
         }else{
             $this->session->set_flashdata('pesan', 'Tidak ada akses') ;
@@ -64,31 +62,27 @@ class User extends CI_Controller{
     public function ubah($id)
     {
         if($this->session->userdata('monev') != null && $this->session->userdata('monev_level_id') == 1) {
-            $data['judul'] = "Ubah Data User - ".MYWEB ;
+            $data['judul'] = "Ubah Data Laboratorium - ".MYWEB ;
             $data['bread'] = [
                 [ '', '', 'Dashboard' ],
-                [ '', 'master/user', 'User' ],
-                [ 'active', '', 'Ubah User' ]
+                [ '', 'master/lab', 'Laboratorium' ],
+                [ 'active', '', 'Ubah Laboratorium' ]
             ];
-            $data['sub'] = 'Ubah Data User' ;
+            $data['sub'] = 'Ubah Data Laboratorium' ;
             $data['level'] = $this->Utility_model->cmbLevel() ;
-            $data['data'] = $this->Master_model->getDataUser($id)->row_array() ;
+            $data['data'] = $this->Master_model->getDataLab($id)->row_array() ;
 
-            if($this->input->post('kode') != $this->input->post('kode_lama')) {
-                $this->form_validation->set_rules('kode', 'Kode / NIP', 'required|is_unique[user.kode]|numeric');
-            }
-
-            $this->form_validation->set_rules('nama', 'Nama', 'required');
-            $this->form_validation->set_rules('id_level', 'Level User', 'required');
+            $this->form_validation->set_rules('nama_lab', 'Laboratorium', 'required');
+            $this->form_validation->set_rules('nama_lain', 'Nama Lab', 'required');
 
             if($this->form_validation->run() == FALSE) {
                 $this->load->view('temp/header', $data) ;
                 $this->load->view('temp/dsb_header') ;
-                $this->load->view('master/user/ubah') ;
+                $this->load->view('master/lab/ubah') ;
                 $this->load->view('temp/dsb_footer') ;
                 $this->load->view('temp/footer') ;
             }else{
-                $this->Master_model->editUser($id) ;
+                $this->Master_model->editLab($id) ;
             }
         }else{
             $this->session->set_flashdata('pesan', 'Tidak ada akses') ;
@@ -99,7 +93,7 @@ class User extends CI_Controller{
     public function hapus($id)
     {
         if($this->session->userdata('monev') != null && $this->session->userdata('monev_level_id') == 1) {
-            $this->Master_model->deleteUser($id) ;
+            $this->Master_model->deleteLab($id) ;
         }else{
             $this->session->set_flashdata('pesan', 'Tidak ada akses') ;
             redirect(MYURL."login") ;

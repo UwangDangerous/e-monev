@@ -36,7 +36,7 @@
 
             <div class="col-lg-12">
                 <button class="btn btn-primary" type="submit">
-                    Simpan
+                    Ubah
                 </button>
             </div>
 
