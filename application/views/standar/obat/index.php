@@ -19,7 +19,7 @@
                 <strong>RENCANA PEMENUHAN SRL OBAT</strong> <br>
                 Berikut Standar Ruang Lingkup Obat <strong><?= $this->session->userdata('monev_name'); ?></strong> yang Belum Terpenuhi <br><small>Klik pada kolom <strong>AKSI</strong> untuk menambahkan data pemenuhan standar ruang lingkup</small>
 
-                <div class="table-responsive mt-3">
+                <div class="table-responsive mt-2 mb-2 mt-3">
                     <table class="table table-borders table-small-text text-center" id="tabel">
                         <thead>
                             <tr class="table-primary">
@@ -202,7 +202,7 @@
                 </div>
               <?php endif ; ?>
             
-            <div class="table-responsive mt-3">
+            <div class="table-responsive mt-2 mb-2 mt-3">
                 <table class="table table-borders table-small-text text-center" id="tabel2">
                     <thead>
                         <tr class="table-primary">
@@ -354,9 +354,68 @@
             </div>
 
             <div class="mt-5"></div>
-            <form action="" method="post">
+
+            <?php if($this->session->flashdata('pesan_catatan')) : ?>
+                <div class="alert alert-<?= $this->session->flashdata('warna_catatan'); ?> alert-dismissible fade show mb-3" role="alert">
+                    <?= $this->session->flashdata('pesan_catatan'); ?>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            <?php endif ; ?>
+
+            <?php if($catatan->num_rows() > 0) : ?>
+                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#isi_catatan" aria-expanded="false" aria-controls="isi_catatan">
+                    Tampilkan Catatan
+                </button>
+                
+                <div class="collapse" id="isi_catatan">
+                    <div class="table-responsive mt-2 mb-2">
+                        <table class="table table-borders text-center" id="tabel3">
+                            <thead>
+                                <tr class="table-primary">
+                                    <th>No</th>
+                                    <th>Isi</th>
+                                    <th>Tanggal</th>
+                                    <th>Tanggapan</th>
+                                    <th>Tanggal</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php $no = 1 ; ?>
+                                <?php foreach ($catatan->result_array() as $row) : ?>
+                                    <tr>
+                                        <td><?= $no++; ?></td>
+                                        <td><?= $row['isi']; ?></td>
+                                        <td><?= $this->Utility_model->formatTanggal($row['tgl1']); ?></td>
+                                        <td>
+                                            <?php if($row['balasan'] == '') : ?>
+                                                -
+                                            <?php else : ?>
+                                                <?= $row['balasan']; ?>
+                                            <?php endif ; ?>
+                                        </td>
+                                        <td>
+                                            <?php if($row['tgl2'] == '0000-00-00') : ?>
+                                                -
+                                            <?php else : ?>
+                                                <?= $this->Utility_model->formatTanggal($row['tgl2']); ?>
+                                            <?php endif ; ?>
+                                        </td>
+                                    </tr>
+                                <?php endforeach ; ?>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <br>
+                <br>
+            <?php endif ; ?>
+
+            <form action="<?= MYURL ;?>standar/obat/tambahCatatan" method="post">
                 <label for="catatan">CATATAN UNTUK VERIFIKATOR</label>
-                <textarea name="catatan" id="catatan" cols="10" rows="5" class="form-control mb-3"></textarea>
+                <textarea name="catatan" id="catatan" cols="10" rows="10" class="form-control mb-3"></textarea> <br>
                 <button class="btn btn-primary" type="submit">
                     Ajukan Verifikasi
                 </button>
@@ -368,4 +427,15 @@
 
 <script>
     $("#tabel2").dataTable() ;
+    $("#tabel3").dataTable() ;
+</script>
+
+<script src="<?= base_url() ;?>assets/tinymce/js/jquery.tinymce.min.js"></script>
+<script src="<?= base_url() ;?>assets/tinymce/js/tinymce.min.js"></script>
+<script>
+    tinymce.init({
+        selector : '#catatan',
+        plugins: 'lists',
+        toolbar: 'undo redo | link image | code | numlist | bullist | bold | italic | underline | superscript | subscript | align | charmap | preview',
+    });
 </script>

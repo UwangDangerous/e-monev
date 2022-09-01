@@ -193,5 +193,35 @@ class Standar_model extends CI_Model{
             $this->session->set_flashdata($pesan) ;
             redirect(MYURL."standar/obat") ;
         }
+
+        public function addCatatanObat()
+        {
+            $query = [
+                'id' => $this->session->userdata('monev_id') ,
+                'isi' => $this->input->post('catatan') ,
+                'tgl1' => date("Y-m-d")
+            ] ;
+
+            if($this->db->insert('catatan_verifikasi', $query)) {
+                $pesan = [
+                    "pesan_catatan" => "Catatan Untuk Verifikator Berhasil Disimpan",
+                    "warna_catatan" => "success"
+                ];
+            }else{
+                $pesan = [
+                    "pesan_catatan" => "Catatan Untuk Verifikator Gagal Disimpan",
+                    "warna_catatan" => "danger"
+                ];
+            }
+
+            $this->session->set_flashdata($pesan) ;
+            redirect(MYURL."standar/obat") ;
+        }
+
+        public function getDataCatatanObat()
+        {
+            $this->db->where('id', $this->session->userdata('monev_id')) ;
+            return $this->db->get("catatan_verifikasi") ;
+        }
     // tutup obat
 }

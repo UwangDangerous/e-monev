@@ -4,16 +4,17 @@
     false , //INPUT DATA SKL
     false , //LIHAT DATA SKL
     false , //MASTER DATA
+    false
   ];
   
   $level = $this->session->userdata('monev_level_id') ;
 
   if($level == 1){ //admin
-    $menu = [false, false, true] ;
+    $menu = [false, false, true, false] ;
   }elseif($level == 2){ //user balai
-    $menu = [true, true , false] ;
+    $menu = [true, true , false, false] ;
   }elseif($level == 3){ //verifikator
-    $menu = [false, false, false] ;
+    $menu = [false, false, false, true] ;
   }
 
 ?>
@@ -298,4 +299,80 @@
     </li>
 <!-- tutup Master data -->
 
+<?php endif ; ?>
+
+
+<?php if($menu[3] == true) : ?>
+            
+    <!-- data skl judul -->
+        <li class="menu-header small text-uppercase">
+        <span class="menu-header-text">Verifikasi Data SKL</span>
+        </li>
+    <!-- data skl judul -->
+    
+    <!-- Standar Ruang Lingkup Verifikasi -->
+        <li class="menu-item">
+            <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <div data-i18n="Standard Ruang lingkup">Standar Ruang Lingkup</div>
+            </a>
+        
+            <ul class="menu-sub">
+                <li class="menu-item">
+                    <a href="<?= MYURL ;?>verifikasi/obat" class="menu-link">
+                    <div data-i18n="SRL-Obat">SRL-Obat</div> 
+                    </a>
+                </li>
+
+                <li class="menu-item">
+                    <a href="user-input-srl-rencana-otsk.html" class="menu-link">
+                    <div data-i18n="SRL-OTSK">SRL-OTSK</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="user-input-srl-rencana-kosmetik.html" class="menu-link">
+                    <div data-i18n="SRL-Kosmetik">SRL-Kosmetik</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="user-input-srl-rencana-pangan.html" class="menu-link">
+                    <div data-i18n="SRL-Pangan">SRL-Pangan</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="user-input-srl-rencana-MBM.html" class="menu-link">
+                    <div data-i18n="SRL-MBM">SRL-MBM</div>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    <!-- Tutup Standar Ruang Lingkup Verifikasi -->
+    
+    <!-- Pemenuhan Peralatan -->
+        <li class="menu-item">
+        <a href="javascript:void(0);" class="menu-link menu-toggle">
+            <div data-i18n="Pemenuhan Peralatan">Pemenuhan Peralatan</div>
+        </a>
+        <ul class="menu-sub">
+            <li class="menu-item">
+            <a href="user-input-alat-kimia.html" class="menu-link">
+                <div data-i18n="Alat-Obat">Peralatan-Kimia</div>
+            </a>
+            </li>
+            <li class="menu-item">
+            <a href="user-input-alat-mbm.html" class="menu-link">
+                <div data-i18n="Alat-Obat Tradisional">Peralatan-mbm</div>
+            </a>
+            </li>
+        </ul>
+        </li>
+    <!-- tutup Pemenuhan Peralatan -->
+    
+    <!-- Pemenuhan Kompetensi -->
+        <li class="menu-item">
+        <a href="user-input-kompetensi.html" class="menu-link">
+            <div data-i18n="Pemenuhan Kompetensi">Pemenuhan Kompetensi</div>
+        </a>
+        </li>
+    <!-- tutup Pemenuhan Kompetensi -->
+    
 <?php endif ; ?>
